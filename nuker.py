@@ -77,4 +77,10 @@ async def help(ctx):
     except:
         await ctx.send(embed=discord.Embed(title='Открой личку чтобы чекнуть хелп'))
 
+@bot.command()
+async def kick(ctx, user : discord.User(), *arg, reason='Причина не указана'):
+    await bot.kick(user)
+    await ctx.send('Пользователь {user.name} был изгнан по причине "{reason}"')
+
+
 client.run(token)
