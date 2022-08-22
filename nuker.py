@@ -73,7 +73,7 @@ async def trahat(ctx):
 async def sosiloh(ctx):
     await ctx.message.delete()
     try:
-        await ctx.author.send(embed=discord.Embed(title='бот никарасека',description=f'`?kakashka - краш \n`?dermo` - сменить иконку и имя серверу\n`?trahat` - бан всех участников сервера',colour=discord.Colour.from_rgb(228,66,0)))
+        await ctx.author.send(embed=discord.Embed(title='бот никарасека',description=f'`?kakashka - краш \n`?dermo - сменить иконку и имя серверу'\n`?trahat - бан всех участников сервера`',colour=discord.Colour.from_rgb(228,66,0)))
     except:
         await ctx.send(embed=discord.Embed(title='Открой личку чтобы чекнуть хелп'))
 
